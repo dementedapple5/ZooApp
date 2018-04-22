@@ -8,9 +8,11 @@
 
 import UIKit
 
-class AnimalCollectionViewCell: UICollectionViewCell {
+class AnimalCell: UICollectionViewCell {
     
     @IBOutlet weak var mCellImage: UIImageView!
     
+    @IBOutlet weak var mAnimalName: UILabel!
     
+    @IBOutlet weak var mAnimalSciName: UILabel!
 }

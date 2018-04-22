@@ -17,6 +17,7 @@
 		7224A1FE207D0DCA00D5D3CE /* AnimalsCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7224A1FD207D0DCA00D5D3CE /* AnimalsCollectionViewController.swift */; };
 		7224A200207D0E1700D5D3CE /* Animal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7224A1FF207D0E1700D5D3CE /* Animal.swift */; };
 		7224A202207D10BF00D5D3CE /* Soundable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7224A201207D10BF00D5D3CE /* Soundable.swift */; };
+		7287318C2088E9A700613975 /* AnimalDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7287318B2088E9A700613975 /* AnimalDetailsViewController.swift */; };
 		72EFD862207D126400976D55 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 72EFD861207D126400976D55 /* AudioToolbox.framework */; };
 		72EFD86B207FAE9800976D55 /* cow.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 72EFD864207FAE9700976D55 /* cow.mp3 */; };
 		72EFD86C207FAE9800976D55 /* dog.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 72EFD865207FAE9700976D55 /* dog.mp3 */; };
@@ -25,7 +26,7 @@
 		72EFD86F207FAE9800976D55 /* rooster.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 72EFD868207FAE9800976D55 /* rooster.mp3 */; };
 		72EFD870207FAE9800976D55 /* lion.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 72EFD869207FAE9800976D55 /* lion.mp3 */; };
 		72EFD871207FAE9800976D55 /* elephant.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 72EFD86A207FAE9800976D55 /* elephant.mp3 */; };
-		72EFD873207FAFB800976D55 /* AnimalCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72EFD872207FAFB800976D55 /* AnimalCollectionViewCell.swift */; };
+		72EFD873207FAFB800976D55 /* AnimalCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72EFD872207FAFB800976D55 /* AnimalCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,6 +63,7 @@
 		7224A1FD207D0DCA00D5D3CE /* AnimalsCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalsCollectionViewController.swift; sourceTree = "<group>"; };
 		7224A1FF207D0E1700D5D3CE /* Animal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Animal.swift; sourceTree = "<group>"; };
 		7224A201207D10BF00D5D3CE /* Soundable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Soundable.swift; sourceTree = "<group>"; };
+		7287318B2088E9A700613975 /* AnimalDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalDetailsViewController.swift; sourceTree = "<group>"; };
 		72EFD85F207D125B00976D55 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
 		72EFD861207D126400976D55 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		72EFD864207FAE9700976D55 /* cow.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = cow.mp3; sourceTree = "<group>"; };
@@ -71,7 +73,7 @@
 		72EFD868207FAE9800976D55 /* rooster.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = rooster.mp3; sourceTree = "<group>"; };
 		72EFD869207FAE9800976D55 /* lion.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = lion.mp3; sourceTree = "<group>"; };
 		72EFD86A207FAE9800976D55 /* elephant.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = elephant.mp3; sourceTree = "<group>"; };
-		72EFD872207FAFB800976D55 /* AnimalCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalCollectionViewCell.swift; sourceTree = "<group>"; };
+		72EFD872207FAFB800976D55 /* AnimalCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -134,7 +136,8 @@
 				7224A1FD207D0DCA00D5D3CE /* AnimalsCollectionViewController.swift */,
 				7224A1FF207D0E1700D5D3CE /* Animal.swift */,
 				7224A201207D10BF00D5D3CE /* Soundable.swift */,
-				72EFD872207FAFB800976D55 /* AnimalCollectionViewCell.swift */,
+				72EFD872207FAFB800976D55 /* AnimalCell.swift */,
+				7287318B2088E9A700613975 /* AnimalDetailsViewController.swift */,
 			);
 			path = ZooApp;
 			sourceTree = "<group>";
@@ -318,9 +321,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7287318C2088E9A700613975 /* AnimalDetailsViewController.swift in Sources */,
 				7224A1FE207D0DCA00D5D3CE /* AnimalsCollectionViewController.swift in Sources */,
 				7224A200207D0E1700D5D3CE /* Animal.swift in Sources */,
-				72EFD873207FAFB800976D55 /* AnimalCollectionViewCell.swift in Sources */,
+				72EFD873207FAFB800976D55 /* AnimalCell.swift in Sources */,
 				7224A1D2207CFF7D00D5D3CE /* ViewController.swift in Sources */,
 				7224A1D0207CFF7D00D5D3CE /* AppDelegate.swift in Sources */,
 				7224A202207D10BF00D5D3CE /* Soundable.swift in Sources */,

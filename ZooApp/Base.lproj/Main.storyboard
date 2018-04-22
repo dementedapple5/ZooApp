@@ -1,44 +1,62 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="QMO-hr-joI">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="tXg-uY-5cB">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Collection View Controller-->
+        <!--ZooApp-->
         <scene sceneID="xnK-7b-qTL">
             <objects>
-                <collectionViewController id="QMO-hr-joI" sceneMemberID="viewController">
+                <collectionViewController title="ZooApp" id="QMO-hr-joI" customClass="AnimalsCollectionViewController" customModule="ZooAPp" customModuleProvider="target" sceneMemberID="viewController">
                     <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="WqH-Ig-Dw9">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="20" minimumInteritemSpacing="20" id="XGI-UY-i0G">
-                            <size key="itemSize" width="150" height="150"/>
+                            <size key="itemSize" width="167" height="220"/>
                             <size key="headerReferenceSize" width="0.0" height="0.0"/>
                             <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                            <inset key="sectionInset" minX="20" minY="20" maxX="20" maxY="20"/>
+                            <inset key="sectionInset" minX="10" minY="20" maxX="10" maxY="20"/>
                         </collectionViewFlowLayout>
                         <cells>
-                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="animalCell" id="2ma-ao-p81" customClass="AnimalCollectionViewCell" customModule="ZooAPp" customModuleProvider="target">
-                                <rect key="frame" x="20" y="20" width="150" height="150"/>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="animalCell" id="2ma-ao-p81" customClass="AnimalCell" customModule="ZooAPp" customModuleProvider="target">
+                                <rect key="frame" x="10" y="20" width="167" height="220"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
-                                    <rect key="frame" x="0.0" y="0.0" width="150" height="150"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="167" height="220"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2wJ-do-Plp">
-                                            <rect key="frame" x="0.0" y="0.0" width="150" height="150"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="167" height="167"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="li2-Aj-vij">
+                                            <rect key="frame" x="0.0" y="169" width="167" height="20"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" weight="light" pointSize="16"/>
+                                            <color key="textColor" red="0.4756349325" green="0.47564673419999998" blue="0.47564041610000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Animal Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wqJ-k5-8qo">
+                                            <rect key="frame" x="0.0" y="192" width="167" height="21"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
                                     </subviews>
                                 </view>
                                 <connections>
+                                    <outlet property="mAnimalName" destination="wqJ-k5-8qo" id="Llh-ic-079"/>
+                                    <outlet property="mAnimalSciName" destination="li2-Aj-vij" id="yC4-Tt-7Y9"/>
                                     <outlet property="mCellImage" destination="2wJ-do-Plp" id="ctD-Rg-69y"/>
+                                    <segue destination="fTb-mx-ZTB" kind="show" id="6dP-5P-Mwm"/>
                                 </connections>
                             </collectionViewCell>
                         </cells>
@@ -47,8 +65,134 @@
                             <outlet property="delegate" destination="QMO-hr-joI" id="FOI-L5-YAE"/>
                         </connections>
                     </collectionView>
+                    <navigationItem key="navigationItem" title="Animal Gallery" id="yja-er-Alr"/>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Tws-HT-3OV" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1776.8" y="130.88455772113943"/>
+        </scene>
+        <!--Animal Details View Controller-->
+        <scene sceneID="A1p-vC-Pgx">
+            <objects>
+                <viewController id="fTb-mx-ZTB" customClass="AnimalDetailsViewController" customModule="ZooAPp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="xt1-Vc-NlX">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="jct-gS-056">
+                                <rect key="frame" x="0.0" y="64" width="375" height="220"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="220" id="jnn-j1-484"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Popular Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kQQ-e8-LvP">
+                                <rect key="frame" x="16" y="292" width="343" height="43"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="36"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Genus" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a17-hW-UG8">
+                                <rect key="frame" x="16" y="409" width="343" height="25"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="25" id="iVp-2a-myJ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Class" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5G6-Mx-MN7">
+                                <rect key="frame" x="16" y="376" width="343" height="25"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="25" id="oDV-Gb-KPp"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sci Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yrt-a9-eDB">
+                                <rect key="frame" x="16" y="339" width="343" height="29"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Family" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gzZ-1a-LtE">
+                                <rect key="frame" x="16" y="442" width="343" height="29"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Order" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jGd-vC-lLG">
+                                <rect key="frame" x="16" y="479" width="343" height="29"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jAA-ga-JcZ">
+                                <rect key="frame" x="16" y="516" width="343" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="jGd-vC-lLG" firstAttribute="top" secondItem="gzZ-1a-LtE" secondAttribute="bottom" constant="8" symbolic="YES" id="0Js-JT-104"/>
+                            <constraint firstItem="5G6-Mx-MN7" firstAttribute="top" secondItem="Yrt-a9-eDB" secondAttribute="bottom" constant="8" symbolic="YES" id="1t2-LC-aDD"/>
+                            <constraint firstItem="gzZ-1a-LtE" firstAttribute="top" secondItem="a17-hW-UG8" secondAttribute="bottom" constant="8" symbolic="YES" id="69G-qZ-ZTf"/>
+                            <constraint firstItem="jGd-vC-lLG" firstAttribute="trailing" secondItem="jAA-ga-JcZ" secondAttribute="trailing" id="6hl-9k-BMw"/>
+                            <constraint firstItem="5G6-Mx-MN7" firstAttribute="trailing" secondItem="a17-hW-UG8" secondAttribute="trailing" id="7Pc-wh-p0c"/>
+                            <constraint firstItem="a17-hW-UG8" firstAttribute="trailing" secondItem="gzZ-1a-LtE" secondAttribute="trailing" id="7dI-fK-u0z"/>
+                            <constraint firstItem="gzZ-1a-LtE" firstAttribute="trailing" secondItem="jGd-vC-lLG" secondAttribute="trailing" id="G3f-tI-1Aa"/>
+                            <constraint firstItem="kQQ-e8-LvP" firstAttribute="leading" secondItem="xt1-Vc-NlX" secondAttribute="leadingMargin" id="GGf-Hf-dvT"/>
+                            <constraint firstAttribute="trailing" secondItem="jct-gS-056" secondAttribute="trailing" id="Ht4-b9-xSD"/>
+                            <constraint firstItem="Yrt-a9-eDB" firstAttribute="leading" secondItem="5G6-Mx-MN7" secondAttribute="leading" id="QDb-SO-v0a"/>
+                            <constraint firstItem="jct-gS-056" firstAttribute="centerX" secondItem="kQQ-e8-LvP" secondAttribute="centerX" id="R54-AM-u00"/>
+                            <constraint firstItem="kQQ-e8-LvP" firstAttribute="trailing" secondItem="Yrt-a9-eDB" secondAttribute="trailing" id="RiZ-FV-kbL"/>
+                            <constraint firstItem="jct-gS-056" firstAttribute="top" secondItem="WCJ-2d-Y49" secondAttribute="top" id="VW9-KJ-oh9"/>
+                            <constraint firstItem="kQQ-e8-LvP" firstAttribute="leading" secondItem="Yrt-a9-eDB" secondAttribute="leading" id="Vfh-Kb-HVD"/>
+                            <constraint firstItem="a17-hW-UG8" firstAttribute="leading" secondItem="gzZ-1a-LtE" secondAttribute="leading" id="VnU-fP-MBf"/>
+                            <constraint firstItem="5G6-Mx-MN7" firstAttribute="leading" secondItem="a17-hW-UG8" secondAttribute="leading" id="Xe6-05-d1n"/>
+                            <constraint firstItem="jct-gS-056" firstAttribute="leading" secondItem="xt1-Vc-NlX" secondAttribute="leading" id="YBH-aM-U8q"/>
+                            <constraint firstItem="jGd-vC-lLG" firstAttribute="leading" secondItem="jAA-ga-JcZ" secondAttribute="leading" id="adZ-rk-E4N"/>
+                            <constraint firstItem="gzZ-1a-LtE" firstAttribute="leading" secondItem="jGd-vC-lLG" secondAttribute="leading" id="b9P-m2-7Te"/>
+                            <constraint firstItem="kQQ-e8-LvP" firstAttribute="top" secondItem="jct-gS-056" secondAttribute="bottom" constant="8" symbolic="YES" id="gZZ-ht-CRK"/>
+                            <constraint firstItem="Yrt-a9-eDB" firstAttribute="trailing" secondItem="5G6-Mx-MN7" secondAttribute="trailing" id="qt3-x0-02S"/>
+                            <constraint firstItem="Yrt-a9-eDB" firstAttribute="top" secondItem="kQQ-e8-LvP" secondAttribute="bottom" constant="4" id="t6C-zm-Mkg"/>
+                            <constraint firstItem="a17-hW-UG8" firstAttribute="top" secondItem="5G6-Mx-MN7" secondAttribute="bottom" constant="8" symbolic="YES" id="v3i-Wn-c9a"/>
+                            <constraint firstItem="jAA-ga-JcZ" firstAttribute="top" secondItem="jGd-vC-lLG" secondAttribute="bottom" constant="8" symbolic="YES" id="y7N-Q9-MMi"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="WCJ-2d-Y49"/>
+                    </view>
+                    <connections>
+                        <outlet property="mAnimalClass" destination="5G6-Mx-MN7" id="SiG-g6-WEa"/>
+                        <outlet property="mAnimalDesc" destination="jAA-ga-JcZ" id="Haw-Et-oRF"/>
+                        <outlet property="mAnimalFamily" destination="gzZ-1a-LtE" id="9wk-JK-DPc"/>
+                        <outlet property="mAnimalGenus" destination="a17-hW-UG8" id="keB-iy-Gh8"/>
+                        <outlet property="mAnimalImage" destination="jct-gS-056" id="PUb-oz-0Dz"/>
+                        <outlet property="mAnimalOrder" destination="jGd-vC-lLG" id="u4d-m1-kxG"/>
+                        <outlet property="mAnimalPopName" destination="kQQ-e8-LvP" id="LEs-px-DAq"/>
+                        <outlet property="mAnimalSciName" destination="Yrt-a9-eDB" id="dUK-dm-TZa"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LvC-cA-1C9" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2696.8000000000002" y="130.88455772113943"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="UME-Rc-Ui8">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="tXg-uY-5cB" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="dae-wo-ySa">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="QMO-hr-joI" kind="relationship" relationship="rootViewController" id="UoB-1q-ZLq"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Y6w-xl-g3l" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="837.60000000000002" y="130.88455772113943"/>
         </scene>
